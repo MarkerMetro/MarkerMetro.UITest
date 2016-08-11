@@ -1,24 +1,21 @@
-<?xml version="1.0"?>
-<package >
-  <metadata>
-    <id>MarkerMetro.UITest.Framework</id>
-    <version>0.0.1.0</version>
-    <title>MarkerMetro.UITest.Framework</title>
-    <authors>Marker Metro</authors>
-    <owners>Marker Metro</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Marker Metro Xamarin UI Tests Framework</description>
-    <releaseNotes>First version</releaseNotes>
-    <copyright>Copyright 2016</copyright>
-    <dependencies>
-      <group>
-        <dependency id="NUnit" version="[2,3)"/>
-        <dependency id="Xamarin.UITest" />
-      </group>
-    </dependencies>
-  </metadata>
-   <files>
-    <file src="bin\Release\MarkerMetro.UITest.Framework.dll"/>
-  </files>
-  
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>MarkerMetro.UITest.Framework</id>
+        <version>0.0.1.0</version>
+        <title>MarkerMetro.UITest.Framework</title>
+        <authors>Marker Metro</authors>
+        <owners>Marker Metro</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Marker Metro Xamarin UI Tests Framework</description>
+        <releaseNotes>First version</releaseNotes>
+        <copyright>Copyright 2016</copyright>
+        <dependencies>
+            <dependency id="NUnit" version="[2.0.0.0, 3.0.0.0)" />
+            <dependency id="Xamarin.UITest" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\MarkerMetro.UITest.Framework.dll" target="lib\MarkerMetro.UITest.Framework.dll" />
+    </files>
 </package>
