@@ -7,8 +7,8 @@
     <ProjectGuid>{D0FDC43A-9AA2-4FA2-830E-60038066ECCB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Framework</RootNamespace>
-    <AssemblyName>Framework</AssemblyName>
+    <RootNamespace>MarkerMetro.UITest.Framework</RootNamespace>
+    <AssemblyName>MarkerMetro.UITest.Framework</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
