@@ -6,11 +6,12 @@
     <title>Marker Metro Xamarin UI Tests Framework</title>
     <authors>Marker Metro</authors>
     <owners>Marker Metro</owners>
-    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
-    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Marker Metro Xamarin UI Tests Framework</description>
     <releaseNotes>First version</releaseNotes>
     <copyright>Copyright 2016</copyright>
   </metadata>
+   <files>
+    <file src="bin\Release\MarkerMetro.UITest.Framework" target="lib\net45" />
+  </files>
 </package>
