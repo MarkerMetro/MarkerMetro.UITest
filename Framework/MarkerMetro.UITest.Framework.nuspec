@@ -11,14 +11,14 @@
     <releaseNotes>First version</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <dependencies>
-      <group targetFramework="net45">
+      <group>
         <dependency id="NUnit" version="[2,3)"/>
         <dependency id="Xamarin.UITest" />
       </group>
     </dependencies>
   </metadata>
    <files>
-    <file src="bin\Release\MarkerMetro.UITest.Framework.dll" target="lib\net45" />
+    <file src="bin\Release\MarkerMetro.UITest.Framework.dll"/>
   </files>
   
 </package>
