@@ -11,6 +11,7 @@ namespace MarkerMetro.UITest.Framework
 		{
 		}
 
+
 		public T Screenshot(string title)
 		{
 			var shot = app.Screenshot(title);

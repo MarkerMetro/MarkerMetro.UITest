@@ -63,6 +63,8 @@ namespace MarkerMetro.UITest.Framework
 		public virtual string WaitForId { get { return null;}}
 		public virtual string ProgressIndicatorId { get { return null; } }
 
+
+
         public T With(Action<T> func)
         {
             func(this as T);
