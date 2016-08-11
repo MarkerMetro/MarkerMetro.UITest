@@ -24,7 +24,7 @@ namespace MarkerMetro.UITest.Framework
 
 		protected abstract string ApkName { get; }
 
-		protected virtual AppLaunchModeOptions AppLaunchMode { get { return AppLaunchModeOptions.EachTest;} }
+		protected virtual AppLaunchModeOptions AppLaunchMode => AppLaunchModeOptions.EachTest;
 
 		protected static string Decode(int[] array)
 		{

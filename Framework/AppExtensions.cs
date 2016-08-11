@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 
 namespace MarkerMetro.UITest.Framework
 {
-    public static class AppExtensions
+	public static class AppExtensions
     {
         public static void TapAndEnterText(this IApp app, string marked, string text)
         {
