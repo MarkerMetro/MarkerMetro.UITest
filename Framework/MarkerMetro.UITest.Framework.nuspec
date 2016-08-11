@@ -3,7 +3,7 @@
   <metadata>
     <id>MarkerMetro.UITest.Framework</id>
     <version>0.0.1.0</version>
-    <title>Marker Metro Xamarin UI Tests Framework</title>
+    <title>MarkerMetro.UITest.Framework</title>
     <authors>Marker Metro</authors>
     <owners>Marker Metro</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -11,14 +11,14 @@
     <releaseNotes>First version</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <dependencies>
-      <group targetFramework="net452">
+      <group targetFramework="net45">
         <dependency id="NUnit" version="[2,3)"/>
         <dependency id="Xamarin.UITest" />
       </group>
     </dependencies>
   </metadata>
    <files>
-    <file src="bin\Release\MarkerMetro.UITest.Framework.dll" target="lib\net452" />
+    <file src="bin\Release\MarkerMetro.UITest.Framework.dll" target="lib\net45" />
   </files>
   
 </package>
