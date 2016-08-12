@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>MarkerMetro.UITest.Framework</id>
-        <version>0.0.1.2</version>
+        <version>0.0.1.3</version>
         <title>MarkerMetro.UITest.Framework</title>
         <authors>Marker Metro</authors>
         <owners>Marker Metro</owners>
@@ -16,6 +16,6 @@
         </dependencies>
     </metadata>
     <files>
-        <file src="bin\Release\MarkerMetro.UITest.Framework.dll" target="lib\MarkerMetro.UITest.Framework.dll" />
+        <file src="bin\Release\MarkerMetro.UITest.Framework.dll" target="lib\net45\MarkerMetro.UITest.Framework.dll" />
     </files>
 </package>
