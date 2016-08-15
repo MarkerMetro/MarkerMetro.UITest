@@ -63,14 +63,14 @@ namespace MarkerMetro.UITest.Framework
         public T With(Action<T> func)
         {
             func(this as T);
-            return this as T;
+            return CreateThis();
         }
 
         public T WithBack(Action<T> func)
         {
             func(this as T);
             app.Back();
-            return this as T;
+			return CreateThis();
         }
 
     }
