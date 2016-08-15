@@ -36,7 +36,7 @@ namespace MarkerMetro.UITest.Framework
 			return Create<T>(waitForProgress);
 		}
 
-		public void WaitUntilReady(bool waitForProgress, TimeSpan? timeout) 
+		public virtual void WaitUntilReady(bool waitForProgress, TimeSpan? timeout) 
 		{
 			if (WaitForId != null)
 				app.WaitForElement(WaitForId);
