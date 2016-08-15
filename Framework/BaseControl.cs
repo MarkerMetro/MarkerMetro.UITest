@@ -14,41 +14,36 @@ namespace MarkerMetro.UITest.Framework
 			this.app = app;
 		}
 
-		protected Y CreateControl<Y>(bool waitForProgress = true, TimeSpan? timeout = null) where Y : class
+		protected Y Create<Y>(bool waitForProgress = true, TimeSpan? timeout = null) where Y : class
 		{
-			return CreateScreen(() => (Y)Activator.CreateInstance(typeof(Y), app), waitForProgress, timeout);
+			return Create(() => (Y)Activator.CreateInstance(typeof(Y), app), waitForProgress, timeout);
 		}
 
-		protected Y CreateScreen<Y>(Func<Y> instantiation, bool waitForProgress = true, TimeSpan? timeout = null) where Y : class
+		protected Y Create<Y>(Func<Y> instantiation, bool waitForProgress = true, TimeSpan? timeout = null) where Y : class
 		{
-			var t = instantiation();
-			WaitUntilReady(waitForProgress, timeout, t);
-			return t;
+			var newScreen = instantiation();
+			(newScreen as BaseControl<Y>).WaitUntilReady(waitForProgress, timeout);
+			return newScreen;
 		}
 
-		protected Y CreateScreen<Y>(bool waitForProgress = true, TimeSpan? timeout = null) where Y : class
+		protected Y Create<Y>(TimeSpan timeout) where Y : class
 		{
-			return CreateControl<Y>(waitForProgress, timeout);
-		}
-
-		protected Y CreateScreen<Y>(TimeSpan timeout) where Y : class
-		{
-			return CreateControl<Y>(true, timeout);
+			return Create<Y>(true, timeout);
 		}
 
 		protected T CreateThis(bool waitForProgress = true)
 		{
-			return CreateControl<T>(waitForProgress);
+			return Create<T>(waitForProgress);
 		}
 
-		protected void WaitUntilReady<Y>(bool waitForProgress, TimeSpan? timeout, Y t) where Y : class
+		public void WaitUntilReady(bool waitForProgress, TimeSpan? timeout) 
 		{
-			if ((t as BaseControl<Y>).WaitForId != null)
+			if (WaitForId != null)
 				app.WaitForElement(WaitForId);
 
 			if (waitForProgress)
 			{
-				if ((t as BaseControl<Y>).ProgressIndicatorId != null)
+				if (ProgressIndicatorId != null)
 				{
 					WaitForProgress(timeout);
 				}
