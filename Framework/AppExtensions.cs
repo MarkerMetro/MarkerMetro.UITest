@@ -28,23 +28,26 @@ namespace MarkerMetro.UITest.Framework
 			return app.Query(query).Any();
         }
 
-        public static void ScrollDownIntoView(this IApp app, string marked)
+        public static void ScrollDownIntoView(this IApp app, string marked, string markedQuery = null,
+											  ScrollStrategy strategy = ScrollStrategy.Auto,
+											  double swipePercentage = 0.67,
+											  int swipeSpeed = 500,
+											  bool withInertia = true)
         {
-            ScrollDownIntoView(app, x => x.Marked(marked), null);
+			ScrollDownIntoView(app, x => x.Marked(marked), markedQuery == null ? (Func < AppQuery, AppQuery>) null : x => x.Marked(marked), strategy, swipePercentage, swipeSpeed, withInertia);
         }
 
-		public static void ScrollDownIntoView(this IApp app, Func<AppQuery, AppQuery> query)
-		{
-			app.ScrollDownIntoView(query, null);
-		}
-
-
-        public static void ScrollDownIntoView(this IApp app, Func<AppQuery, AppQuery> query, Func<AppQuery, AppQuery> withinQuery)
+        public static void ScrollDownIntoView(this IApp app, Func<AppQuery, AppQuery> query, Func<AppQuery, AppQuery> withinQuery = null,
+		                                      ScrollStrategy strategy = ScrollStrategy.Auto,
+		                                      double swipePercentage = 0.67,
+		                                      int swipeSpeed = 500,
+		                                      bool withInertia = true
+		                                     )
         {
             int loop = 0;
             while (!app.Exists(query))
             {
-				app.ScrollDown(withinQuery);
+				app.ScrollDown(withinQuery, strategy, swipePercentage, swipeSpeed, withInertia);
                 loop++;
                 if (loop > 3) break;
             }
