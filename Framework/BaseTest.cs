@@ -20,15 +20,24 @@ namespace MarkerMetro.UITest.Framework
 			None
 		}
 		
-        protected AndroidApp app;
+        protected IApp app;
+		Platform platform;
 
-		protected abstract string ApkName { get; }
+
+		protected virtual string ApkPath { get { throw new MissingFieldException(); } }
+
+		protected virtual string BundlePath { get { throw new MissingFieldException(); } }
 
 		protected virtual AppLaunchModeOptions AppLaunchMode { get { return AppLaunchModeOptions.EachTest;} }
 
 		protected static string Decode(int[] array)
 		{
 			return string.Join("", array.Select(x => (char)x));
+		}
+
+		protected BaseTest(Platform platform)
+		{
+			this.platform = platform;
 		}
 
 
@@ -53,20 +62,26 @@ namespace MarkerMetro.UITest.Framework
 		protected void StartApplication()
 		{
 			string currentFile = new Uri(Assembly.GetExecutingAssembly().CodeBase).LocalPath;
-			FileInfo fi = new FileInfo(currentFile);
-			string dir = fi.Directory.Parent.Parent.Parent.FullName;
+			if (platform == Platform.Android)
+			{
+				app = ConfigureApp
+					.Android
+					.ApkFile(ApkPath)
+					.EnableLocalScreenshots()
+					.StartApp();					
 
-			app = ConfigureApp
-				.Android
-				.ApkFile(Path.Combine(dir, ApkName))
-				.EnableLocalScreenshots()
-				.StartApp();
+			}
+			else {
+
+				app = ConfigureApp
+					.iOS
+					.AppBundle(BundlePath)
+					.EnableLocalScreenshots()
+					.StartApp();
+			}
+
+
 		}
 
-
-
-
-
-        
     }
 }

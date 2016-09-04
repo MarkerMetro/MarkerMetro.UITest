@@ -1,15 +1,15 @@
 ﻿using System;
 using NUnit.Framework;
-using Xamarin.UITest.Android;
+using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 
 namespace MarkerMetro.UITest.Framework
 {
 	public abstract class BaseControl<T> where T : class
 	{
-		protected AndroidApp app;
+		protected IApp app;
 
-		protected BaseControl(AndroidApp app)
+		protected BaseControl(IApp app)
 		{
 			this.app = app;
 		}
