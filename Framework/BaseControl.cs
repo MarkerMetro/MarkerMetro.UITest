@@ -1,6 +1,8 @@
 ﻿using System;
 using NUnit.Framework;
 using Xamarin.UITest;
+using Xamarin.UITest.Android;
+using Xamarin.UITest.iOS;
 using Xamarin.UITest.Queries;
 
 namespace MarkerMetro.UITest.Framework
@@ -12,6 +14,22 @@ namespace MarkerMetro.UITest.Framework
 		protected BaseControl(IApp app)
 		{
 			this.app = app;
+		}
+
+		protected AndroidApp AndroidApp
+		{
+			get
+			{
+				return app as AndroidApp;
+			}
+		}
+
+		protected iOSApp iOSApp
+		{
+			get
+			{
+				return app as iOSApp;
+			}
 		}
 
 		protected Y Create<Y>(bool waitForProgress = true, TimeSpan? timeout = null) where Y : class
@@ -69,9 +87,14 @@ namespace MarkerMetro.UITest.Framework
         public T WithBack(Action<T> func)
         {
             func(this as T);
-            app.Back();
-			return CreateThis();
+			return Back();
         }
+
+		public T Back()
+		{
+			app.Back();
+			return CreateThis();
+		}
 
     }
 }
