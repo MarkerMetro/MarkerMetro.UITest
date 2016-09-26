@@ -1,5 +1,7 @@
 
-## Set up
+![build status](http://alice.markermetro.com/app/rest/builds/buildType:(id:MarkerMetroUITest_Release)/statusIcon) **Release**
+
+## Writing Tests
 
 ### Basics
 * Create (in Visual Studio or Xamarin Studio) a new "UI Test App" solution. Create this as a subdirectory under the application you intend to test
