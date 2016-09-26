@@ -3,13 +3,13 @@
 
 ## Writing Tests
 
-### Basics
+### Set up
 * Create (in Visual Studio or Xamarin Studio) a new "UI Test App" solution. Create this as a subdirectory under the application you intend to test
 * Add the Nuget package ```MarkerMetro.UITest.Framework```
 * Create a class called ```BaseTest``` (or similar) that inherits from ```MarkerMetro.UITest.Framework.BaseTest```
 * Override ```ApkPath``` and/or ```BundlePath```. This file is relative to the UITest bin folder
 
-### Writing the first test
+### Writing tests
 * Create a unit test class, and inherit from your ```BaseTest```
 * Running an empty test should run the application (either device or emulator) and pass the test
 * In a new folder called ```Screens``` create a class called ```Application``` that inherits from ```MarkerMetro.UITest.Framework.BaseScreen```, ie ```Application : BaseControl<Application>```
