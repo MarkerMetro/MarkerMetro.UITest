@@ -18,6 +18,9 @@ http://www.seleniumhq.org/docs/06_test_design_considerations.jsp
 http://martinfowler.com/bliki/PageObject.html
 http://automatetheplanet.com/page-object-pattern/
 
+Refer to the Xamarin Evolve 2016 app for another example of fluent style Screen Object tests
+https://github.com/xamarinhq/app-evolve
+
 ![build status](http://alice.markermetro.com/app/rest/builds/buildType:(id:MarkerMetroUITest_CI)/statusIcon) **CI**
 
 ## Usage
