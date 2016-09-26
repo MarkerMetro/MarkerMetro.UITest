@@ -1,4 +1,22 @@
 
+## Getting Started
+
+MarkerMetro.UITest is a library to support writing Xamarin UI tests (for running locally or on Xamarin Test Cloud) using "Screen Objects" in a fluent style.
+
+The resulting tests are easier to follow, cleaner and more maintainable:
+~~~
+Application.NavigateToHomeScreen()
+            .TapSearch()
+            .EnterSearchTerm("bananas")
+            .SelectResult(0)
+~~~
+
+Refer to the follow articles for background of this style of test:
+https://danatxamarin.com/2015/05/12/building-a-scalable-test-suite-with-xamarin-uitest-and-page-objects/
+http://www.seleniumhq.org/docs/06_test_design_considerations.jsp
+http://martinfowler.com/bliki/PageObject.html
+http://automatetheplanet.com/page-object-pattern/
+
 ![build status](http://alice.markermetro.com/app/rest/builds/buildType:(id:MarkerMetroUITest_Release)/statusIcon) **Release**
 
 ## Usage
@@ -28,4 +46,6 @@ Application.NavigateToHomeScreen()
 ~~~
 .With((dashboard) => Assert.AreEqual(balance, dashboard.GetBalance()));
 ~~~
+* For each screen (or use a base Screen class), override ```ProgressIndicatorId``` to force a wait for that element to not be present before the test continues. This is useful for automated waiting for loading spinners, ect
+* For each screen (or use a base Screen class), override ```WaitForId``` to force a wait for that element to be present before the test continues. This can be useful is screens load asnychronously and elements should be present before continuing
 
