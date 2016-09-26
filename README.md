@@ -24,4 +24,7 @@ Application.NavigateToHomeScreen()
             .SelectResult(0)
 ~~~
 * The contents of these methods will be calls to the ```app``` object. Refer to Xamarin UI Test documentation for the different options. Also read "Using Xamarin Test Recorder" below
+* Use ```With``` to call a method on a screen that is not fluent. This is particularly useful for assertions, for example ~~~
+.With((dashboard) => Assert.AreEqual(balance, dashboard.GetBalance()));
+~~~
 
