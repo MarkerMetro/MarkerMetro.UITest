@@ -13,10 +13,10 @@ Application.NavigateToHomeScreen()
 
 Refer to the follow articles for background of this style of test:
 
-https://danatxamarin.com/2015/05/12/building-a-scalable-test-suite-with-xamarin-uitest-and-page-objects/
-http://www.seleniumhq.org/docs/06_test_design_considerations.jsp
-http://martinfowler.com/bliki/PageObject.html
-http://automatetheplanet.com/page-object-pattern/
+- https://danatxamarin.com/2015/05/12/building-a-scalable-test-suite-with-xamarin-uitest-and-page-objects/
+- http://www.seleniumhq.org/docs/06_test_design_considerations.jsp
+- http://martinfowler.com/bliki/PageObject.html
+- http://automatetheplanet.com/page-object-pattern/
 
 Refer to the Xamarin Evolve 2016 app for another example of fluent style Screen Object tests
 https://github.com/xamarinhq/app-evolve
