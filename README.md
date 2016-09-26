@@ -34,7 +34,7 @@ http://automatetheplanet.com/page-object-pattern/
 * Add the necessary constructor
 * Add a property to your base test that returns an instance of Application
 * Add methods to ```Application``` that navigate to a new screens etc. For these screen, create another class in the same way as ```Application```
-* The methods on these screen classes should return either a new screen (using ```Create<T>```) or themselves (using ```CreateThis```). This chain will produce a fluent interface, for example
+* To form the fluent interface, the methods on these "Screen" classes should return either a new screen (using ```Create<T>```) or themselves (using ```CreateThis```). For example
 ~~~
 Application.NavigateToHomeScreen()
             .TapSearch()
@@ -42,10 +42,10 @@ Application.NavigateToHomeScreen()
             .SelectResult(0)
 ~~~
 * The contents of these methods will be calls to the ```app``` object. Refer to Xamarin UI Test documentation for the different options. Also read "Using Xamarin Test Recorder" below
-* Use ```With``` to call a method on a screen object that is not fluent. This is particularly useful for assertions, for example 
+* Use ```With``` to call a method on a Screen object that is not fluent. This is particularly useful for assertions, for example 
 ~~~
 .With((dashboard) => Assert.AreEqual(balance, dashboard.GetBalance()));
 ~~~
-* For each screen (or use a base Screen class), override ```ProgressIndicatorId``` to force a wait for that element to not be present before the test continues. This is useful for automated waiting for loading spinners, ect
-* For each screen (or use a base Screen class), override ```WaitForId``` to force a wait for that element to be present before the test continues. This can be useful is screens load asnychronously and elements should be present before continuing
+* For each Screen (or, alternatively, use a base Screen class), override ```ProgressIndicatorId``` to force a wait for that element to not be present before the test continues. This is useful for automated waiting for loading spinners, ect
+* For each Screen (or, alternatively, use a base Screen class), override ```WaitForId``` to force a wait for that element to be present before the test continues. This can be useful is screens load asnychronously and elements should be present before continuing
 
