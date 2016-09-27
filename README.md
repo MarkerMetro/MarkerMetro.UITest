@@ -50,6 +50,6 @@ Application.NavigateToHomeScreen()
 ~~~
 .With((dashboard) => Assert.AreEqual(balance, dashboard.GetBalance()));
 ~~~
-* For each Screen (or, alternatively, use a base Screen class), override ```ProgressIndicatorId``` to force a wait for that element to not be present before the test continues. This is useful for automated waiting for loading spinners, ect
-* For each Screen (or, alternatively, use a base Screen class), override ```WaitForId``` to force a wait for that element to be present before the test continues. This can be useful is screens load asnychronously and elements should be present before continuing
+* For each Screen (or, alternatively, use a base Screen class), override ```ProgressIndicatorId``` to force a wait for that element to not be present before the test continues. This is useful for automated waiting for loading spinners etc.
+* For each Screen (or, alternatively, use a base Screen class), override ```WaitForId``` to force a wait for that element to be present before the test continues. This can be useful if screens load asnychronously and elements should be present before continuing.
 
