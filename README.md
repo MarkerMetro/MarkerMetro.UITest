@@ -38,7 +38,7 @@ https://github.com/xamarinhq/app-evolve
 * Add the necessary constructor.
 * Add a property to your base test that returns an instance of ```Application```.
 * Add methods to ```Application``` that navigate to new screens, etc. To model these screens, create another Screen Object class in the same way as you created ```Application```.
-* In order to form the fluent interface, methods on these "Screen" classes should return either the new screen being navigated to (using ```Create<T>```) or themselves again (using ```CreateThis```). In this example the method, ```NavigateToHomeScreen``` is returning ```Create<SearchScreen>(app)```.
+* In order to form the fluent interface, methods on these "Screen" classes should return either the new screen being navigated to (using ```Create<T>```) or themselves again (using ```CreateThis```). In this example the method ```NavigateToHomeScreen``` is returning ```Create<SearchScreen>(app)```.
 ~~~
 Application.NavigateToHomeScreen()
             .TapSearch()
