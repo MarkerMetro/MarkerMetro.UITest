@@ -14,6 +14,7 @@ Application.NavigateToHomeScreen()
 Refer to the following articles for some background on this style of test:
 
 - https://danatxamarin.com/2015/05/12/building-a-scalable-test-suite-with-xamarin-uitest-and-page-objects/
+- https://github.com/danwaters/vspom
 - http://www.seleniumhq.org/docs/06_test_design_considerations.jsp
 - http://martinfowler.com/bliki/PageObject.html
 - http://automatetheplanet.com/page-object-pattern/
