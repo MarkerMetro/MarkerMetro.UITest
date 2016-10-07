@@ -28,12 +28,24 @@ https://github.com/xamarinhq/app-evolve
 
 ### Set up
 * Create (in Visual Studio or Xamarin Studio) a new "UI Test App" solution. Create this as a subdirectory under the application you intend to test.
-* Add the Nuget package ```MarkerMetro.UITest.Framework```.
+* Add the Nuget package ```MarkerMetro.UITest.Framework``` https://www.nuget.org/packages/MarkerMetro.UITest.Framework.
 * Create a class called ```BaseTest``` (or similar) that inherits from ```MarkerMetro.UITest.Framework.BaseTest```.
 * Override ```ApkPath``` and/or ```BundlePath```. This file is relative to the UITest bin folder, so will usually be in the form ```../../../iOS/bin/<and so on>```.
 
+
 ### Writing tests
 * Create a unit test class, and inherit from your ```BaseTest```.
+* Don't forget to attribute this class with the correct platforms and pass this through to the constructor
+~~~
+[TestFixture(Platform.Android)]
+[TestFixture(Platform.iOS)]
+public class ThisTest : BaseTest
+{
+            public Tests(Platform platform) :  base(platform)
+            {
+            }
+}
+~~~
 * Running an empty test should run the application (either device or emulator) and pass the test.
 * In a new folder called ```Screens``` create a class called ```Application``` that inherits from ```MarkerMetro.UITest.Framework.BaseScreen```, ie ```Application : BaseControl<Application>```.
 * Add the necessary constructor.
