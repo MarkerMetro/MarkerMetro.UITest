@@ -23,6 +23,7 @@ Refer to the Xamarin Evolve 2016 app for another example of fluent style Screen 
 https://github.com/xamarinhq/app-evolve
 
 ![build status](http://alice.markermetro.com/app/rest/builds/buildType:(id:MarkerMetroUITest_CI)/statusIcon) **CI**
+Nuget: https://www.nuget.org/packages/MarkerMetro.UITest.Framework
 
 ## Usage
 
