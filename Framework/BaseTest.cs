@@ -30,11 +30,6 @@ namespace MarkerMetro.UITest.Framework
 
 		protected virtual AppLaunchModeOptions AppLaunchMode { get { return AppLaunchModeOptions.EachTest;} }
 
-		protected static string Decode(int[] array)
-		{
-			return string.Join("", array.Select(x => (char)x));
-		}
-
 		protected BaseTest(Platform platform)
 		{
 			this.platform = platform;

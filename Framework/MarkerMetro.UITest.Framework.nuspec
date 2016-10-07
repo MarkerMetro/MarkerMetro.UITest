@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>MarkerMetro.UITest.Framework</id>
-        <version>0.0.2.0</version>
+        <version>0.0.3.0</version>
         <title>MarkerMetro.UITest.Framework</title>
         <authors>Marker Metro</authors>
         <owners>Marker Metro</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Marker Metro Xamarin UI Tests Framework</description>
-        <releaseNotes>First version</releaseNotes>
+        <releaseNotes>Added suuport for iOS 10 via 2.0.0-beta03 or Xamarin.UITest</releaseNotes>
         <copyright>Copyright 2016</copyright>
         <dependencies>
             <dependency id="NUnit" version="[2.0.0.0, 3.0.0.0)" />
